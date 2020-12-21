@@ -1,0 +1,26 @@
+
+//How To run
+1. cmake -DCMAKE_INSTALL_PREFIX=/w/halla-scifs17exp/sbs/thir/libsbsdig-install ../ && make install
+2. sbsdig db_gmn_conf.dat gmn13.5_elastic_ex.txt 100000
+
+//Add a new detector (POLSCINT_BS)
+1. Add a new detector on the line 6 of db_gmn_conf.dat
+2. Add digitization parameters in it
+3. Add those parameters into sbsdig.cxx
+4. Copy the block line 231-242, and change the variables names like in the database (Copy paste and define the type right)
+5. Add and change following:
+  if(skey=="sigmapulse_POLSCINT_BS"){  // => the name here should be compatible with the name listed on the database
+             TString stemp = ( (TObjString*) (*tokens)[1] )->GetString();
+                    sigmapulse_POLSCINT_BS = stemp.Atof();//the name here should be compatible with the name defined earlier in sbsdig.cxx
+                         }
+6. Declare detectors: Add PRPOLSCINT_BS at the end or replaced BBHODO by PRPOLSCINT_BS
+                      bbhodo=>prpolscint_bs from there, it should add the detector in the list of detectors and try to process it
+7. If it goes through, then go to:
+    src/SBSDigAuxi.cxx
+8. Now, go to
+   src/SBSDigPMTSignal.cxx
+   lines 448-482 copy, and change "Earm_BBHodo_Dig" to "Harm_PRPolScintBeamSide_Dig"
+   oh, and don't forget to change (both there and in what you did in SBSDigAuxi.cxx)
+    HODO_UNIQUE_DETID with PRPOLBS_SCINT_UNIQUE_DETID
+9. Harm_PRPolScintBeamSide and Harm_PRPolScintBeamSide_Dig are defined in
+    src/g4sbs_tree.h lines 173, 174
