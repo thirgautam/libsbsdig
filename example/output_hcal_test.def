@@ -1,0 +1,13 @@
+#block sbs.hcal.a.m*
+#block sbs.hcal.a_p.m*
+#block sbs.hcal.a_c.m*
+
+## HCal variables
+variable sbs.hcal.row
+variable sbs.hcal.col
+variable sbs.hcal.a
+variable sbs.hcal.tdc
+variable sbs.hcal.a_p
+variable sbs.hcal.a_c
+block sbs.hcal.samps*
+variable sbs.hcal.nsamps
