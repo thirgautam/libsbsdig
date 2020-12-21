@@ -1,0 +1,367 @@
+950101
+
+bb.gem.dettype = GEM
+bb.gem.unique_id = 40
+
+bb.gem.info.do_map_sector = 0
+bb.gem.info.self_define_sector = 0
+bb.gem.info.sector_mapped = 0
+bb.gem.info.nchamber = 5
+
+bb.gem.info.nsector = 1
+bb.gem.info.nplane = 5
+bb.gem.info.nmodule = 3 3 3 3 4
+bb.gem.info.nreadout = 2
+bb.gem.info.chan_per_slot = 2048
+bb.gem.info.modules_per_readout = 1
+
+#bb.gem.info.nsignal = 1
+#bb.gem.info.signal1.pid = 11
+#bb.gem.info.signal1.tid = 1
+
+bb.gem.info.g4sbs_detectortype = 1
+bb.gem.info.g4sbs_z_specoffset = 0.8031825 #0.800000
+bb.gem.info.z0 = 0.850000
+
+#bb.gem.info.calo_thr = 2.4 # GeV
+#bb.gem.info.calo_z = 2.704 #Z of BB ECal at max shower energy deposit, in m
+#bb.gem.info.calo_res = 0.010000
+#bb.gem.info.docalo = 0
+
+## Slot and crate info
+bb.gem.first_crate = 100
+bb.gem.first_slot  = 0
+
+# Gas parameters:
+bb.gem.gasionwidth = 26.  # eV
+bb.gem.gasdiffusion = 100000.  # mm2/s
+bb.gem.gasdriftvelocity = 5.5e7 # mm/s
+bb.gem.avalanchefiducialband = 10.0 # n sigma
+bb.gem.avalanchechargestatistics = 1 # 0 Furry, 1 Gaussian
+bb.gem.ava_model = 2 #0 HeavySide, 1 Gaussian, 2 Cauchy-Lorentz
+bb.gem.ava_gain = 20.0
+bb.gem.gainmean = 8000.0 #4000 for HeavySide
+bb.gem.gain0 = 20.0
+bb.gem.avalateraluncertainty = 0. #mm
+bb.gem.avalanche_range = 18.0
+bb.gem.max_ion = 10000
+
+# Electronics parameters:
+bb.gem.triggeroffset = 121.0 121.5 122.0 122.5 126.0 # ns # to have everything land on 0 when no jitters
+bb.gem.triggerjitter = 9.  # ns
+bb.gem.apv_time_jitter = 0.  # ns 
+bb.gem.elesamplingpoints = 6
+bb.gem.elesamplingperiod = 25.  # ns 
+bb.gem.adcoffset = 0.
+bb.gem.adcgain = 1
+bb.gem.adcbits = 12
+bb.gem.gatewidth = 400.  # ns 
+
+# GEM pedestal noise
+bb.gem.pulsenoisesigma = 20.    #ADC values
+bb.gem.pulsenoiseperiod = 200. #ns
+bb.gem.pulsenoiseampconst = 0. #ADC values
+bb.gem.pulsenoiseampsigma = 0. #ADC values
+
+# Pulse shaping parameters:
+bb.gem.pulseshapetau0 = 56 #38.3  # ns
+bb.gem.pulseshapetau1 = -1 #129.  # ns
+
+# Geometry
+bb.gem.zrout = 9.185   # mm
+bb.gem.use_tracker_frame = 0
+bb.gem.entrance_ref = -1.5 # mm # -4.6825
+
+#numerical integration parameter
+bb.gem.y_integral_step_per_pitch = 4
+bb.gem.x_integral_step_per_pitch = 4
+
+#APV25 cross talk parameter
+bb.gem.do_crosstalk = 1
+bb.gem.crosstalk_mean = 0.1
+bb.gem.crosstalk_sigma = 0.03
+bb.gem.crosstalk_strip_apart = 32
+
+#zero suppression and common mode
+bb.gem.do_zerosup = 1
+bb.gem.zerosup = 240.0
+bb.gem.do_commonmode = 1
+bb.gem.commonmode_array = 500.0 # probably more like 1200...
+
+
+#in here the time I understand
+bb.gem.chambers = plane0 plane1 plane2 plane3 plane4
+bb.gem.plane0.modules = module0 module1 module2
+bb.gem.plane1.modules = module0 module1 module2
+bb.gem.plane2.modules = module0 module1 module2
+bb.gem.plane3.modules = module0 module1 module2
+bb.gem.plane4.modules = module0 module1 module2 module3
+
+###############Plane 0#####################
+bb.gem.plane0.module0.dmag = 1.875000
+bb.gem.plane0.module0.d0 = 0.850000
+bb.gem.plane0.module0.xoffset = -0.512000
+bb.gem.plane0.module0.dx = 0.512000
+bb.gem.plane0.module0.dy = 0.409600
+#bb.gem.plane0.module0.thetaH = -33.000000
+bb.gem.plane0.module0.thetaV = 10.000000
+bb.gem.plane0.module0.depth = 0.015955
+bb.gem.plane0.module0.x.stripangle = 0.0
+bb.gem.plane0.module0.x.pitch = 0.000400
+bb.gem.plane0.module0.y.stripangle = 90.0
+bb.gem.plane0.module0.y.pitch = 0.000400
+
+bb.gem.plane0.module1.dmag = 1.875000
+bb.gem.plane0.module1.d0 = 0.850000
+bb.gem.plane0.module1.xoffset = 0.000000
+bb.gem.plane0.module1.dx = 0.512000
+bb.gem.plane0.module1.dy = 0.409600
+#bb.gem.plane0.module1.thetaH = -33.000000
+bb.gem.plane0.module1.thetaV = 10.000000
+bb.gem.plane0.module1.depth = 0.015955
+bb.gem.plane0.module1.x.stripangle = 0.0
+bb.gem.plane0.module1.x.pitch = 0.000400
+bb.gem.plane0.module1.y.stripangle = 90.0
+bb.gem.plane0.module1.y.pitch = 0.000400
+
+bb.gem.plane0.module2.dmag = 1.875000
+bb.gem.plane0.module2.d0 = 0.850000
+bb.gem.plane0.module2.xoffset = 0.512000
+bb.gem.plane0.module2.dx = 0.512000
+bb.gem.plane0.module2.dy = 0.409600
+#bb.gem.plane0.module2.thetaH = -33.000000
+bb.gem.plane0.module2.thetaV = 10.000000
+bb.gem.plane0.module2.depth = 0.015955
+bb.gem.plane0.module2.x.stripangle = 0.0
+bb.gem.plane0.module2.x.pitch = 0.000400
+bb.gem.plane0.module2.y.stripangle = 90.0
+bb.gem.plane0.module2.y.pitch = 0.000400
+
+###############Plane 1#####################
+bb.gem.plane1.module0.dmag = 1.875000
+bb.gem.plane1.module0.d0 = 1.000000
+bb.gem.plane1.module0.xoffset = -0.512000
+bb.gem.plane1.module0.dx = 0.512000
+bb.gem.plane1.module0.dy = 0.409600
+#bb.gem.plane1.module0.thetaH = -33.000000
+bb.gem.plane1.module0.thetaV = 10.000000
+bb.gem.plane1.module0.depth = 0.015955
+bb.gem.plane1.module0.x.stripangle = 0.0
+bb.gem.plane1.module0.x.pitch = 0.000400
+bb.gem.plane1.module0.y.stripangle = 90.0
+bb.gem.plane1.module0.y.pitch = 0.000400
+
+bb.gem.plane1.module1.dmag = 1.875000
+bb.gem.plane1.module1.d0 = 1.000000
+bb.gem.plane1.module1.xoffset = 0.000000
+bb.gem.plane1.module1.dx = 0.512000
+bb.gem.plane1.module1.dy = 0.409600
+#bb.gem.plane1.module1.thetaH = -33.000000
+bb.gem.plane1.module1.thetaV = 10.000000
+bb.gem.plane1.module1.depth = 0.015955
+bb.gem.plane1.module1.x.stripangle = 0.0
+bb.gem.plane1.module1.x.pitch = 0.000400
+bb.gem.plane1.module1.y.stripangle = 90.0
+bb.gem.plane1.module1.y.pitch = 0.000400
+
+bb.gem.plane1.module2.dmag = 1.875000
+bb.gem.plane1.module2.d0 = 1.000000
+bb.gem.plane1.module2.xoffset = 0.512000
+bb.gem.plane1.module2.dx = 0.512000
+bb.gem.plane1.module2.dy = 0.409600
+bb.gem.plane1.module2.thetaH = -33.000000
+bb.gem.plane1.module2.thetaV = 10.000000
+bb.gem.plane1.module2.depth = 0.015955
+bb.gem.plane1.module2.x.stripangle = 0.0
+bb.gem.plane1.module2.x.pitch = 0.000400
+bb.gem.plane1.module2.y.stripangle = 90.0
+bb.gem.plane1.module2.y.pitch = 0.000400
+
+###############Plane 2#####################
+bb.gem.plane2.module0.dmag = 1.875000
+bb.gem.plane2.module0.d0 = 1.150000
+bb.gem.plane2.module0.xoffset = -0.512000
+bb.gem.plane2.module0.dx = 0.512000
+bb.gem.plane2.module0.dy = 0.409600
+#bb.gem.plane2.module0.thetaH = -33.000000
+bb.gem.plane2.module0.thetaV = 10.000000
+bb.gem.plane2.module0.depth = 0.015955
+bb.gem.plane2.module0.x.stripangle = 0.0
+bb.gem.plane2.module0.x.pitch = 0.000400
+bb.gem.plane2.module0.y.stripangle = 90.0
+bb.gem.plane2.module0.y.pitch = 0.000400
+
+bb.gem.plane2.module1.dmag = 1.875000
+bb.gem.plane2.module1.d0 = 1.150000
+bb.gem.plane2.module1.xoffset = 0.000000
+bb.gem.plane2.module1.dx = 0.512000
+bb.gem.plane2.module1.dy = 0.409600
+#bb.gem.plane2.module1.thetaH = -33.000000
+bb.gem.plane2.module1.thetaV = 10.000000
+bb.gem.plane2.module1.depth = 0.015955
+bb.gem.plane2.module1.x.stripangle = 0.0
+bb.gem.plane2.module1.x.pitch = 0.000400
+bb.gem.plane2.module1.y.stripangle = 90.0
+bb.gem.plane2.module1.y.pitch = 0.000400
+
+bb.gem.plane2.module2.dmag = 1.875000
+bb.gem.plane2.module2.d0 = 1.150000
+bb.gem.plane2.module2.xoffset = 0.512000
+bb.gem.plane2.module2.dx = 0.512000
+bb.gem.plane2.module2.dy = 0.409600
+#bb.gem.plane2.module2.thetaH = -33.000000
+bb.gem.plane2.module2.thetaV = 10.000000
+bb.gem.plane2.module2.depth = 0.015955
+bb.gem.plane2.module2.x.stripangle = 0.0
+bb.gem.plane2.module2.x.pitch = 0.000400
+bb.gem.plane2.module2.y.stripangle = 90.0
+bb.gem.plane2.module2.y.pitch = 0.000400
+
+###############Plane 3#####################
+bb.gem.plane3.module0.dmag = 1.875000
+bb.gem.plane3.module0.d0 = 1.300000
+bb.gem.plane3.module0.xoffset = -0.512000
+bb.gem.plane3.module0.dx = 0.512000
+bb.gem.plane3.module0.dy = 0.409600
+#bb.gem.plane3.module0.thetaH = -33.000000
+bb.gem.plane3.module0.thetaV = 10.000000
+bb.gem.plane3.module0.depth = 0.015955
+bb.gem.plane3.module0.x.stripangle = 0.0
+bb.gem.plane3.module0.x.pitch = 0.000400
+bb.gem.plane3.module0.y.stripangle = 90.0
+bb.gem.plane3.module0.y.pitch = 0.000400
+
+bb.gem.plane3.module1.dmag = 1.875000
+bb.gem.plane3.module1.d0 = 1.300000
+bb.gem.plane3.module1.xoffset = 0.000000
+bb.gem.plane3.module1.dx = 0.512000
+bb.gem.plane3.module1.dy = 0.409600
+#bb.gem.plane3.module1.thetaH = -33.000000
+bb.gem.plane3.module1.thetaV = 10.000000
+bb.gem.plane3.module1.depth = 0.015955
+bb.gem.plane3.module1.x.stripangle = 0.0
+bb.gem.plane3.module1.x.pitch = 0.000400
+bb.gem.plane3.module1.y.stripangle = 90.0
+bb.gem.plane3.module1.y.pitch = 0.000400
+
+bb.gem.plane3.module2.dmag = 1.875000
+bb.gem.plane3.module2.d0 = 1.300000
+bb.gem.plane3.module2.xoffset = 0.512000
+bb.gem.plane3.module2.dx = 0.512000
+bb.gem.plane3.module2.dy = 0.409600
+#bb.gem.plane3.module2.thetaH = -33.000000
+bb.gem.plane3.module2.thetaV = 10.000000
+bb.gem.plane3.module2.depth = 0.015955
+bb.gem.plane3.module2.x.stripangle = 0.0
+bb.gem.plane3.module2.x.pitch = 0.000400
+bb.gem.plane3.module2.y.stripangle = 90.0
+bb.gem.plane3.module2.y.pitch = 0.000400
+
+###############Plane 4#####################
+bb.gem.plane4.module0.dmag = 1.875000
+bb.gem.plane4.module0.d0 = 2.33224 #2.32935 # 2.3582044 # 
+bb.gem.plane4.module0.xoffset = -0.76800
+bb.gem.plane4.module0.dx = 0.512000
+bb.gem.plane4.module0.dy = 0.614400
+#bb.gem.plane4.module0.thetaH = -33.000000
+bb.gem.plane4.module0.thetaV = 10.000000
+bb.gem.plane4.module0.depth = 0.015955
+bb.gem.plane4.module0.x.stripangle = 0.0
+bb.gem.plane4.module0.x.pitch = 0.000400
+bb.gem.plane4.module0.y.stripangle = 90.0
+bb.gem.plane4.module0.y.pitch = 0.000400
+
+bb.gem.plane4.module1.dmag = 1.875000
+bb.gem.plane4.module1.d0 = 2.33224 #2.32935 # 2.3582044 # 
+bb.gem.plane4.module1.xoffset = -0.25600
+bb.gem.plane4.module1.dx = 0.512000
+bb.gem.plane4.module1.dy = 0.614400
+#bb.gem.plane4.module1.thetaH = -33.000000
+bb.gem.plane4.module1.thetaV = 10.000000
+bb.gem.plane4.module1.depth = 0.015955
+bb.gem.plane4.module1.x.stripangle = 0.0
+bb.gem.plane4.module1.x.pitch = 0.000400
+bb.gem.plane4.module1.y.stripangle = 90.0
+bb.gem.plane4.module1.y.pitch = 0.000400
+
+bb.gem.plane4.module2.dmag = 1.875000
+bb.gem.plane4.module2.d0 = 2.33224 #2.32935 # 2.3582044 # 
+bb.gem.plane4.module2.xoffset = 0.25600
+bb.gem.plane4.module2.dx = 0.512000
+bb.gem.plane4.module2.dy = 0.614400
+#bb.gem.plane4.module2.thetaH = -33.000000
+bb.gem.plane4.module2.thetaV = 10.000000
+bb.gem.plane4.module2.depth = 0.015955
+bb.gem.plane4.module2.x.stripangle = 0.0
+bb.gem.plane4.module2.x.pitch = 0.000400
+bb.gem.plane4.module2.y.stripangle = 90.0
+bb.gem.plane4.module2.y.pitch = 0.000400
+
+bb.gem.plane4.module3.dmag = 1.875000
+bb.gem.plane4.module3.d0 = 2.33224 #2.32935 # 2.3582044 # 
+bb.gem.plane4.module3.xoffset = 0.76800
+bb.gem.plane4.module3.dx = 0.512000
+bb.gem.plane4.module3.dy = 0.614400
+#bb.gem.plane4.module3.thetaH = -33.000000
+bb.gem.plane4.module3.thetaV = 10.000000
+bb.gem.plane4.module3.depth = 0.015955
+bb.gem.plane4.module3.x.stripangle = 0.0
+bb.gem.plane4.module3.x.pitch = 0.000400
+bb.gem.plane4.module3.y.stripangle = 90.0
+bb.gem.plane4.module3.y.pitch = 0.000400
+
+
+#Tracker parameters: tossed in here ()
+# These should be essential for the decoding
+# we will have to adopt a norm I guess and stick to it (EPAF)
+bb.gem.tracker.planeconfig = 1.x 1.y 2.x 2.y 3.x 3.y 4.x 4.y 5.x 5.y
+bb.gem.tracker.cratemap = \
+      0     0       29      6425   2048 \
+      1     0       1      6425   2048
+
+bb.gem.tracker.1.x.detmap = \
+               0  0  0 1279 0 \
+               0  2  0 1279 1 \
+               0  4  0 1279 2
+bb.gem.tracker.1.y.detmap = \
+               0  1  0 1023 0 \
+               0  3  0 1023 1 \
+               0  5  0 1023 2
+
+bb.gem.tracker.2.x.detmap = \
+               0  6 0 1279 0   \
+               0  8  0 1279 1  \
+               0  10  0 1279 2
+bb.gem.tracker.2.y.detmap = \
+               0  7  0 1023 0 \
+               0  9  0 1023 1 \
+               0  11  0 1023 2
+
+bb.gem.tracker.3.x.detmap = \
+               0  12  0 1279 0 \
+               0  14  0 1279 1 \
+               0  16  0 1279 2
+bb.gem.tracker.3.y.detmap = \
+               0  13  0 1023 0 \
+               0  15  0 1023 1 \
+               0  17  0 1023 2
+
+bb.gem.tracker.4.x.detmap = \
+               0  18  0 1279 0 \
+               0  20  0 1279 1 \
+               0  22  0 1279 2
+bb.gem.tracker.4.y.detmap = \
+               0  19  0 1023 0 \
+               0  21  0 1023 1 \
+               0  23  0 1023 2
+
+bb.gem.tracker.5.x.detmap = \
+               0  24  0 1279 0 \
+               0  26  0 1279 1 \
+               0  28  0 1279 2 \
+               1  0  0 1279 3
+bb.gem.tracker.5.y.detmap = \
+               0  25  0 1535 0 \
+               0  27  0 1535 1 \
+               0  29  0 1535 2 \
+               1  1  0 1535  3

@@ -1,0 +1,21 @@
+#expt info
+geninfo.sbsexptype = gmn
+geninfo.nspecs = 2
+geninfo.specnames = sbs bb
+
+#sbs spectrometer MC signal info
+geninfo.sbs.mcangle = 14.8
+geninfo.sbs.nsignal = 2
+geninfo.sbs.signal.pid = 2112 2212
+geninfo.sbs.signal.tid = 2 2
+geninfo.sbs.ndets = 1
+geninfo.sbs.detnames = hcal
+
+#bb spectrometer MC signal info
+geninfo.bb.mcangle = 33.0
+geninfo.bb.nsignal = 1
+geninfo.bb.signal.pid = 11
+geninfo.bb.signal.tid = 1
+geninfo.bb.ndets = 5
+geninfo.bb.detnames = sh ps hodo grinch gem
+
