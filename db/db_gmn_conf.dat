@@ -3,7 +3,9 @@ Rseed 0
 #global trigger jitter for all detectors in ns
 TriggerJitter 3.0 
 #list of detectors to digitize
-detectors_list hcal bbps bbsh grinch bbhodo bbgem  prpolscint_bs prpolscint_fs activeana cepol_front cepol_rear
+detectors_list hcal bbps bbsh grinch bbhodo bbgem  prpolscint_bs prpolscint_fs 
+#activeana 
+#cepol_front cepol_rear
 
 ## parameters for bbps
 NChan_bbps 52 

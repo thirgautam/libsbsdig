@@ -1,1 +1,1 @@
-/w/halla-scifs17exp/sbs/thir/g4_work/build/genrp_4.5GeV2_conf3.root
+genrp_4.5GeV2_conf3_3.root

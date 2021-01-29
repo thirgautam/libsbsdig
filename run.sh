@@ -1,8 +1,8 @@
 #!/bin/sh
 pwdd=`pwd`
-cd /w/halla-scifs17exp/sbs/thir/v4libsbsdg/buidlN/
-cmake -DCMAKE_INSTALL_PREFIX=/w/halla-scifs17exp/sbs/thir/v4libsbsdg/libsbsdig-install/ ../libsbsdig/ && make install
-#make install
+cd /w/halla-scifs17exp/sbs/thir/vgit4libsbsdg/buildM/
+rm -r *
+cmake -DCMAKE_INSTALL_PREFIX=/w/halla-scifs17exp/sbs/thir/vgit4libsbsdg/libsbsdig-install/ ../libsbsdig/ && make install
 echo $pwdd
 cd $pwdd
-sbsdig db/db_gmn_conf.dat gmn13.5_elastic_prod.txt 1000
+sbsdig db/db_genrp_conf_dev.dat gmn13.5_elastic_ex.txt 1000

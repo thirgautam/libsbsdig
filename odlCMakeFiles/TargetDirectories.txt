@@ -1,0 +1,7 @@
+/w/halla-scifs17exp/sbs/thir/vgit4libsbsdg/libsbsdig/CMakeFiles/install/strip.dir
+/w/halla-scifs17exp/sbs/thir/vgit4libsbsdg/libsbsdig/CMakeFiles/install/local.dir
+/w/halla-scifs17exp/sbs/thir/vgit4libsbsdg/libsbsdig/CMakeFiles/install.dir
+/w/halla-scifs17exp/sbs/thir/vgit4libsbsdg/libsbsdig/CMakeFiles/list_install_components.dir
+/w/halla-scifs17exp/sbs/thir/vgit4libsbsdg/libsbsdig/CMakeFiles/rebuild_cache.dir
+/w/halla-scifs17exp/sbs/thir/vgit4libsbsdg/libsbsdig/CMakeFiles/edit_cache.dir
+/w/halla-scifs17exp/sbs/thir/vgit4libsbsdg/libsbsdig/CMakeFiles/sbsdig.dir

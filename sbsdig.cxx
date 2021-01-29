@@ -321,7 +321,7 @@ int main(int argc, char** argv){
   Double_t gatewidth_activeana = 30.;
   Double_t gain_activeana = 3.e7;
   Double_t ped_activeana = 300.;
-  Double_t pedsigma_activeana = 10.;
+  Double_t pedsigma_activeana = 10.0;
   Double_t trigoffset_activeana = 37.6;
   Double_t threshold_activeana = 3.e3;
   Double_t ADCconv_activeana = 100.;
